@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="GD.css">
+    <link rel="icon" href="GD_logo.ico">
+    <title>RRRRRRRRRRRRRRRRRRRRRRRRRRRRrrrrrrrrrrrrrrrrrrrrrrrrrrrr</title>
+</head>
+
+<body>
+    <header class="page-header">
+        <img src="GD_logo.png" alt="Logo de Geometry Dash">
+        <h1>RRRRRRRRRRRRRRRRRRRR<br>rrrrrrrrrrrrrrrrrrr</h1>
+        <img src="GD_logo.png" alt="" aria-hidden="true">
+    </header>
+    <main>
+        <section class="bloc">
+            <h2>Bravo !</h2>
+            <p>Vous avez réussi à trouver l'easter egg !</p>
+            <p>Attention, il y a un "P" caché dans le texte.</p>
+            <p><em>Si tu le trouves, GG à toi.
+                    <br>
+                    Mais soyons honnête, ça ne sert à rien de le trouver, c'est juste pour le fun que j'ai fait ça.
+                </em></p>
+        </section>
+        <section class="bloc">
+            <h2>RRRRRRRRRRRRRRRRRRRRrrrrrrrrrrrrrrrrrrr</h2>
+            <p>RRRRRRRRRRRRRRRRRRRRrrrrrrrrrrrrrrrrrrrRRRRRRRRRRRRRRRRRRRRrrrrrrrrrrrrrrrrrrr<br>
+                RRRRRRRRRRRRRRRRRRRRrrrrrrrrrrrrrrrrrrrRRRRRRRRRRRRRRRRRRRRrrrrrrrrrrrrrrrrrrr<br>
+                RRRRRRRRRRRRRRRRRRRRrrrrrrrrrrrrrrrrrrrRRRRRRRRRRRRRRRRRRRRrrrrrrrrrrrrrrrrrrr<br>
+                RRRRRRRRRRRRRRRRRRRRrrrrrrrrrrrrrrrrrrrRRRRRRRRRRRRRRRRRRRRrrrrrrrrrrrrrrrrrrr<br>
+                RRRRRRRRRRRRRRRRRRRRrrrrrrrrrrrrrrrrrrrRRRRRRRRRRRRRRRRRRRRrrrrrrrrrrrrrrrrrrr<br>
+                RRRRR<span class="EE"
+                    tabindex="0">P</span>RRRRRRRRRRRRRRrrrrrrrrrrrrrrrrrrrRRRRRRRRRRRRRRRRRRRRrrrrrrrrrrrrrrrrrrr<br>
+                RRRRRRRRRRRRRRRRRRRRrrrrrrrrrrrrrrrrrrrRRRRRRRRRRRRRRRRRRRRrrrrrrrrrrrrrrrrrrr<br>
+                RRRRRRRRRRRRRRRRRRRRrrrrrrrrrrrrrrrrrrrRRRRRRRRRRRRRRRRRRRRrrrrrrrrrrrrrrrrrrr<br>
+                RRRRRRRRRRRRRRRRRRRRrrrrrrrrrrrrrrrrrrrRRRRRRRRRRRRRRRRRRRRrrrrrrrrrrrrrrrrrrr<br>
+                RRRRRRRRRRRRRRRRRRRRrrrrrrrrrrrrrrrrrrrRRRRRRRRRRRRRRRRRRRRrrrrrrrrrrrrrrrrrrr<br>
+                RRRRRRRRRRRRRRRRRRRRrrrrrrrrrrrrrrrrrrrRRRRRRRRRRRRRRRRRRRRrrrrrrrrrrrrrrrrrrr<br>
+                RRRRRRRRRRRRRRRRRRRRrrrrrrrrrrrrrrrrrrrRRRRRRRRRRRRRRRRRRRRrrrrrrrrrrrrrrrrrrr<br>
+                RRRRRRRRRRRRRRRRRRRRrrrrrrrrrrrrrrrrrrrRRRRRRRRRRRRRRRRRRRRrrrrrrrrrrrrrrrrrrr<br>
+                RRRRRRRRRRRRRRRRRRRRrrrrrrrrrrrrrrrrrrrRRRRRRRRRRRRRRRRRRRRrrrrrrrrrrrrrrrrrrr<br>
+                RRRRRRRRRRRRRRRRRRRRrrrrrrrrrrrrrrrrrrrRRRRRRRRRRRRRRRRRRRRrrrrrrrrrrrrrrrrrrr<br>
+                RRRRRRRRRRRRRRRRRRRRrrrrrrrrrrrrrrrrrrrRRRRRRRRRRRRRRRRRRRRrrrrrrrrrrrrrrrrrrr<br>
+                RRRRRRRRRRRRRRRRRRRRrrrrrrrrrrrrrrrrrrrRRRRRRRRRRRRRRRRRRRRrrrrrrrrrrrrrrrrrrr
+            </p>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <nav class="footer-links" aria-label="Liens du site">
+            <a href="Sources.html">Sources</a>
+            <a href="GD+.html">Présentation détaillée de Geometry Dash</a>
+            <a href="index.html">Accueil</a>
+        </nav>
+        <p class="signature">Matys Delaunay 2<sup>nd</sup>1</p>
+    </footer>
+    <script>
+        const lettreP = document.querySelector(".EE");
+
+        if (lettreP) {
+            let notificationEnvoyee = false;
+
+            const montrerEasterEgg = () => {
+                if (notificationEnvoyee) return;
+
+                notificationEnvoyee = true;
+                lettreP.classList.add("trouve");
+
+                void lettreP.offsetWidth;
+
+                window.setTimeout(() => {
+                    alert("Bravo ! Tu as trouvé le P caché.\n\nMais soyons honnête, ça ne sert à rien de le trouver, c'est juste pour le fun que j'ai fait ça.\n");
+                }, 300);
+            };
+
+            lettreP.addEventListener("mouseenter", montrerEasterEgg);
+            lettreP.addEventListener("focus", montrerEasterEgg);
+            lettreP.addEventListener("click", montrerEasterEgg);
+        }
+    </script>
+</body>
+
+</html>
